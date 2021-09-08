@@ -24,6 +24,8 @@
   "homepage": "https://github.com/manchicken/secdemo-js-express#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mysql2": "^2.3.0"
+    "mysql2": "^2.3.0",
+    "loadash": "^0.0.1",
+    "mongose": "^0.0.1"
   }
 }
