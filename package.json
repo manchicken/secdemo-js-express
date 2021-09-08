@@ -1,0 +1,29 @@
+{
+  "name": "secdemo-js-express",
+  "version": "1.0.0",
+  "description": "THIS IS AN INTENTIONALLY VULNERABLE REPOSITORY FOR EDUCATIONAL PURPOSES ONLY!",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manchicken/secdemo-js-express.git"
+  },
+  "keywords": [
+    "security",
+    "vulnerability",
+    "nodejs",
+    "express"
+  ],
+  "author": "Michael D. Stemle, Jr. <manchicken@manchicken.com>",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/manchicken/secdemo-js-express/issues"
+  },
+  "homepage": "https://github.com/manchicken/secdemo-js-express#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.3.0"
+  }
+}
