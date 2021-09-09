@@ -12,9 +12,35 @@
 
 const express = require('express')
 const app = express()
+const mysql = require('mysql2/promise')
 
 const port = 3001
+
+// THE FOLLOWING ARE FAKE, BUT FOR EDUCATIONAL PURPOSES!
+const DB_HOST = "localhost"
+const DB_USER = "appuser"
+const DB_PASSWORD = "apppassword"
+const DB_NAME = "appdb"
+
+const dbConn = async () => await mysql.createConnection({
+  host: DB_HOST,
+  user: DB_USER,
+  password: DB_PASSWORD,
+  database: DB_NAME,
+  insecureAuth: true
+})
+
 app.get('/', (req, res) => res.send('OK'))
+
+app.get('/key/:id', async (req, res) => {
+  const db = await dbConn()
+
+  const result = await db.query(`SELECT * FROM keys_and_values WHERE id=${req.params.id}`)
+
+  console.log(result)
+  res.json(result)
+})
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
